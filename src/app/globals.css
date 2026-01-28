@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #7FA888;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #E8F0EB;
+  --color-secondary-foreground: #2D3A32;
+  --color-accent: #D4A373;
+  --color-background: #FDFCFA;
+  --color-foreground: #2D3A32;
+  --color-muted: #F2F5F3;
+  --color-muted-foreground: #64748B;
+  --color-border: #E2E8F0;
+  
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  
+  /* Border Radius */
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+  
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+:root {
+  --background: #FDFCFA;
+  --foreground: #2D3A32;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Base Styles */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
